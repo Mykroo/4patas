@@ -68,13 +68,10 @@ shelter-4patas/
 
 # 👋 Immediate To-Do:
 
-- [x] Set up basic React + Tailwind project
+- [ ] Set up basic React + Tailwind project
 - [ ] Create file structure (components for each section)
 - [ ] Draft simple HTML structure for each section (no fancy styling yet)
 - [ ] Add base Tailwind classes for responsiveness and spacing
 - [ ] Later: Add nice images, hover effects, scroll animations
 
----
-
-Would you like to continue now with the actual **Hero Section** and **About Us Section** skeletons?
 
