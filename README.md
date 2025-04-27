@@ -9,6 +9,15 @@
 
 ---
 
+### Frontend (React)
+- Functional components and hooks.
+- Tailwind CSS for mobile-first design.
+- State managed with Redux Toolkit or Zustand.
+- Atomic component design (Atoms → Molecules → Organisms → Templates → Pages).
+
+---
+
+
 # 🖼 Landing Page Sections (Proposed 6 Sections)
 
 | # | Section             | Purpose                                                                                      |
@@ -54,6 +63,17 @@ shelter-4patas/
 
 ---
 
+# 🧰 Tech Stack
+
+- **Frontend Framework:** [React](https://react.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Version Control & Collaboration:** Git & GitHub
+- **Linting:** [ESLint](https://eslint.org/)
+- **Code Formatting:** [Prettier](https://prettier.io/)
+- **Testing:** [Jest](https://jestjs.io/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+---
+
 # 🎨 Color Palette Suggestion
 
 | Name           | Hex Code     | Use                                |
@@ -63,6 +83,23 @@ shelter-4patas/
 | Light Mint     | `#CAFFBF`     | Cards and small sections           |
 | White          | `#FFFFFF`     | Backgrounds                        |
 | Soft Gray      | `#F1F5F9`     | Background sections, separators    |
+
+---
+
+### 🎨 Desgin principles 
+- **Separation of Concerns**: custom hooks for logic, components for UI.
+- **Functional Component Design**: favor pure, stateless components.
+- **Custom Hooks Pattern**: encapsulate logic like forms, fetching, and auth.
+- **Context + Provider Pattern**: for global state (auth, language, theme).
+- **Atomic Design**: organize UI as atoms, molecules, organisms.
+- **Folder-by-Feature Structure**: maintainable directory layout.
+- **Composition over Inheritance**: pass props and children for flexibility.
+- **SOLID Principles** for class and logic design.
+- **Separation of Concerns (SoC)**: views, serializers, services, and models clearly separated.
+- **DRY (Don't Repeat Yourself)**: reusable utilities, mixins, and service layers.
+- **Fat Models, Thin Views**: business logic prioritized in models or service layers.
+- **YAGNI and KISS**: only build what is needed, keep logic simple.
+- **Clean Architecture Inspiration**: structured as domain-driven with optional `services/`, `repositories/`, and 
 
 ---
 
