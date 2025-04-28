@@ -1,4 +1,6 @@
 ⚠️ Opportunities for Improvement
+# Misc
+- use npx shadcn@latest add * to add components
 
 1. Break Into Atomic Components
    - Description: Decompose the landing page into reusable UI primitives following Atomic Design principles.
