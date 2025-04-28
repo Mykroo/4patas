@@ -87,7 +87,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # 🧱 Basic File Structure (React + Tailwind)
 
 ```bash
-shelter-4patas/
+4patas/
 ├── public/
 │   └── images/           # Dog and cat images
 ├── src/
