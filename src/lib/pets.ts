@@ -1,0 +1,31 @@
+export interface Pet {
+  id: number;
+  image: string;
+  nameKey: string; // i18n key for name
+  descriptionKey: string; // i18n key for description
+  link: string;
+}
+
+export const featuredPets: ReadonlyArray<Pet> = [
+  {
+    id: 1,
+    image: "/images/pet1.jpg",
+    nameKey: "pets.fido.name",
+    descriptionKey: "pets.fido.description",
+    link: "/pets/1",
+  },
+  {
+    id: 2,
+    image: "/images/pet2.jpg",
+    nameKey: "pets.luna.name",
+    descriptionKey: "pets.luna.description",
+    link: "/pets/2",
+  },
+  {
+    id: 3,
+    image: "/images/pet3.jpg",
+    nameKey: "pets.max.name",
+    descriptionKey: "pets.max.description",
+    link: "/pets/3",
+  },
+]; 
