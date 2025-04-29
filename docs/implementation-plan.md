@@ -73,3 +73,46 @@
      4. Run an automated audit with `axe-core` or browser devtools Accessibility panel.
      5. Manually test keyboard navigation across the full page to identify focus traps and fix them.
    - Benefits: Meets WCAG guidelines, broadens user reach, and provides inclusive UX.
+
+8. Internationalization (i18n) with JSON Language Files
+   - Description: Support multiple languages (default: Spanish) by externalizing all user-facing text and language-dependent data into JSON files. This enables easy translation and language switching.
+   - Actions:
+     1. Configure Next.js i18n routing in `next.config.js`:
+        ```js
+        module.exports = {
+          i18n: {
+            locales: ['es', 'en'],
+            defaultLocale: 'es',
+          },
+        }
+        ```
+     2. Install and set up [`next-intl`](https://next-intl.dev/docs/getting-started/app-router):
+        - `npm install next-intl`
+        - Add a `[locale]` segment to your `app/` directory for locale-aware routing.
+        - Create a `src/locales/` or `messages/` directory with one JSON file per language (e.g., `es.json`, `en.json`).
+        - Organize translations by section/component for maintainability.
+     3. Create a translation utility using `useTranslations` from `next-intl`:
+        ```tsx
+        import { useTranslations } from 'next-intl';
+        const t = useTranslations('Header');
+        return <h1>{t('welcome')}</h1>;
+        ```
+     4. Refactor all hardcoded UI text to use translation keys from the JSON files.
+     5. Implement a language switcher in the Header:
+        - Use `next-intl` navigation helpers to switch locales and update the URL.
+        - Persist user language choice via cookie or URL.
+        - Example:
+        ```tsx
+        import { useRouter, usePathname } from 'next-intl/navigation';
+        // ...
+        <select onChange={handleChangeLocale} value={currentLocale}>
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+        ```
+     6. Ensure all navigation links and routes are locale-aware (e.g., `/es/about`, `/en/about`).
+     7. Provide fallback to Spanish if a translation is missing.
+     8. Use `next-intl` for formatting dates, numbers, and currencies according to locale.
+     9. Test the language switcher and all localized content for both SSR and CSR.
+     10. (Optional) For advanced needs, consider integrating with translation management platforms (e.g., Crowdin, Transifex) for collaborative translation workflows.
+   - Benefits: Makes the site accessible to a wider audience, simplifies translation, enables easy language switching, and future-proofs for additional languages. Follows Next.js and industry best practices for i18n.
