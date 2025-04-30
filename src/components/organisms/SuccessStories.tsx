@@ -6,13 +6,13 @@ const successStories = [
   {
     id: 1,
     name: "Bella",
-    image: "/static/images/success1.jpg",
+    image: "/images/success1.jpg",
     description: "Bella found her forever home and is now living happily with her new family.",
   },
   {
     id: 2,
     name: "Charlie",
-    image: "/static/images/success2.jpg",
+    image: "/images/success2.jpg",
     description: "Charlie overcame many challenges and is now thriving in a loving environment.",
   },
 ];

@@ -10,22 +10,22 @@ export const featuredPets: ReadonlyArray<Pet> = [
   {
     id: 1,
     image: "/images/pet1.jpg",
-    nameKey: "pets.fido.name",
-    descriptionKey: "pets.fido.description",
+    nameKey: "Pets.fido.name",
+    descriptionKey: "Pets.fido.description",
     link: "/pets/1",
   },
   {
     id: 2,
     image: "/images/pet2.jpg",
-    nameKey: "pets.luna.name",
-    descriptionKey: "pets.luna.description",
+    nameKey: "Pets.luna.name",
+    descriptionKey: "Pets.luna.description",
     link: "/pets/2",
   },
   {
     id: 3,
     image: "/images/pet3.jpg",
-    nameKey: "pets.max.name",
-    descriptionKey: "pets.max.description",
+    nameKey: "Pets.max.name",
+    descriptionKey: "Pets.max.description",
     link: "/pets/3",
   },
 ]; 

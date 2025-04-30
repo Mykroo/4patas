@@ -153,4 +153,48 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] Add base Tailwind classes for responsiveness and spacing
 - [ ] Later: Add nice images, hover effects, scroll animations
 
+---
+
+# 🌐 Internationalization (i18n) with next-intl Routing
+
+This project uses [next-intl](https://next-intl.dev/) with **routing** for full multi-language support and SEO-friendly URLs.
+
+- **Locale in URL:** All routes are prefixed with the locale, e.g. `/en/about`, `/es/about`.
+- **App Router:** All locale-aware pages/components live under `src/app/[locale]/`.
+- **Provider:** `NextIntlClientProvider` is used in `src/app/[locale]/layout.tsx`.
+- **Translations:**
+  - All translations are in `src/messages/en.json`, `src/messages/es.json`, etc.
+  - Each file must have the same top-level keys (namespaces) and keys within them.
+- **How to use translations:**
+  ```tsx
+  import { useTranslations } from 'next-intl';
+  const t = useTranslations('Home');
+  <h1>{t('heroTitle')}</h1>
+  ```
+- **How to add new translations:**
+  - Add the key to both `en.json` and `es.json` under the correct namespace.
+- **How to add a new language:**
+  - Add a new JSON file in `src/messages/` (e.g., `fr.json`).
+  - Update `src/middleware.ts` and `src/i18n/request.ts` to include the new locale.
+- **How to switch languages:**
+  - Use locale-aware buttons with next/navigation for switching.
+  - Example:
+    ```tsx
+    import { usePathname, useRouter } from 'next/navigation';
+    
+    const pathname = usePathname();
+    const router = useRouter();
+    const currentLocale = pathname.split('/')[1] || 'es';
+    
+    const switchLocale = (newLocale: string) => {
+      const newPath = pathname.replace(/^\/(en|es)/, '') || '/';
+      router.push(`/${newLocale}${newPath}`);
+    };
+    
+    <button onClick={() => switchLocale('en')}>English</button>
+    <button onClick={() => switchLocale('es')}>Español</button>
+    ```
+
+For detailed implementation steps, see [`docs/nextintl_routing_roadmap.md`](docs/nextintl_routing_roadmap.md).
+
 

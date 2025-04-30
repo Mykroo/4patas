@@ -1,19 +1,23 @@
+"use client";
 import { Heading } from "../atoms/Heading";
 import { Text } from "../atoms/Text";
 import { ImageAtom } from "../atoms/ImageAtom";
 import type { ReactElement } from "react";
+import { useTranslations } from "next-intl";
 
 export const AboutUs = (): ReactElement => {
+  const t = useTranslations("About");
+  
   return (
     <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <Heading level={2} className="mb-4">About Us</Heading>
+        <Heading level={2} className="mb-4">{t("title")}</Heading>
         <Text className="mb-8 text-lg">
-          We are dedicated to finding loving homes for pets in need. Our mission is to provide shelter, care, and a second chance for every animal.
+          {t("mission")}
         </Text>
         <ImageAtom
-          src="/static/images/fininas.jpg"
-          alt="About us image"
+          src="/images/fininas.jpg"
+          alt={t("imageAlt")}
           width={600}
           height={400}
           className="mx-auto"

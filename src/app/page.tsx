@@ -1,5 +1,6 @@
-import { LandingPage } from "../components/templates/LandingPage";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <LandingPage />;
+  redirect("/es");
+  return null;
 }
