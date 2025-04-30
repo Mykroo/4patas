@@ -6,7 +6,7 @@ import type { ReactElement } from "react";
 import { useTranslations } from "next-intl";
 
 export const AboutUs = (): ReactElement => {
-  const t = useTranslations("About");
+  const t = useTranslations("about");
   
   return (
     <section className="py-16 px-4">

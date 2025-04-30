@@ -1,0 +1,14 @@
+{
+  "fido": {
+    "name": "Fido",
+    "description": "Un compañero amoroso esperando un hogar."
+  },
+  "luna": {
+    "name": "Luna",
+    "description": "Juguetona y amigable, perfecta para familias."
+  },
+  "max": {
+    "name": "Max",
+    "description": "Gentil y leal, buscando un hogar para siempre."
+  }
+} 

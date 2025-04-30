@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 import type { ReactElement } from "react";
 
 export const HeroSection = (): ReactElement => {
-  const t = useTranslations("Home");
-  const nav = useTranslations("Navigation");
-  const common = useTranslations("Common");
+  const t = useTranslations("home");
+  const nav = useTranslations("navigation");
+  const common = useTranslations("common");
   const pathname = usePathname();
   const currentLocale = pathname.split("/")[1] || "es";
 

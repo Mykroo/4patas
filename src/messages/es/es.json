@@ -1,0 +1,26 @@
+{
+  "header": {
+    "welcome": "Bienvenido a Shelter 4Patas",
+    "adopt": "Adoptar",
+    "donate": "Donar",
+    "home": "Inicio"
+  },
+  "pets": {
+    "fido": {
+      "name": "Fido",
+      "description": "Un compañero amoroso esperando un hogar."
+    },
+    "luna": {
+      "name": "Luna",
+      "description": "Juguetona y amigable, perfecta para familias."
+    },
+    "max": {
+      "name": "Max",
+      "description": "Gentil y leal, buscando un hogar para siempre."
+    }
+  },
+  "common": {
+    "learnMore": "Saber más",
+    "noPets": "No se encontraron mascotas."
+  }
+} 

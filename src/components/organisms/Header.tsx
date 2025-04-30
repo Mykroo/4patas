@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 
 export const Header = (): ReactElement => {
-  const t = useTranslations("Navigation");
-  const common = useTranslations("Common");
+  const t = useTranslations("navigation");
+  const common = useTranslations("common");
   const router = useRouter();
   const pathname = usePathname();
   const currentLocale = pathname.split("/")[1] || "es";

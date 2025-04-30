@@ -7,9 +7,9 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
 export const FeaturedPets = (): ReactElement => {
-  const home = useTranslations("Home");
-  const common = useTranslations("Common");
-  const t = useTranslations();
+  const home = useTranslations("home");
+  const common = useTranslations("common");
+  const pets = useTranslations("pets");
   const pathname = usePathname();
   const currentLocale = pathname.split("/")[1] || "es";
 
@@ -25,9 +25,9 @@ export const FeaturedPets = (): ReactElement => {
               <Card
                 key={pet.id}
                 imageSrc={pet.image}
-                imageAlt={t(pet.nameKey)}
-                title={t(pet.nameKey)}
-                description={t(pet.descriptionKey)}
+                imageAlt={pets(pet.nameKey)}
+                title={pets(pet.nameKey)}
+                description={pets(pet.descriptionKey)}
                 linkHref={`/${currentLocale}${pet.link}`}
                 linkLabel={common("learnMore")}
               />

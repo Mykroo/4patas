@@ -1,0 +1,14 @@
+{
+  "fido": {
+    "name": "Fido",
+    "description": "A loving companion waiting for a home."
+  },
+  "luna": {
+    "name": "Luna",
+    "description": "Playful and friendly, perfect for families."
+  },
+  "max": {
+    "name": "Max",
+    "description": "Gentle and loyal, looking for a forever home."
+  }
+} 
